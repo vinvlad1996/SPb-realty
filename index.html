@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Петербургская недвижимость</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="form__flex">
+            <input class="form__flex_one" type="text" placeholder="Введите ЖК / корпус / № квартиры / № паркинга">
+            <div class="field room-block checkboxset active" data-prefix="" data-postfix=" комн." data-type="rooms">
+                <div class="wrap">
+                    <div class="value" data-title="Все статусы"></div>
+                    <div class="arrw"></div>
+                </div>
+                <div class="dropdown">
+                    <div class="inner">
+                        <label class="checkbox-standart"><input id="flat_studio" data-title="С" name="NewSearchFormFull[flat_studio]" value="1" type="checkbox"><span class="check"></span><span class="val">Забронировано</span></label>
+                        <label class="checkbox-standart"><input id="flat_room_1" name="NewSearchFormFull[flat_room_1]" value="1" type="checkbox"><span class="check"></span><span class="val">Продано</span></label>
+                        <label class="checkbox-standart"><input id="flat_room_2" name="NewSearchFormFull[flat_room_2]" value="1" type="checkbox"><span class="check"></span><span class="val">Активно</span></label>
+                    </div>
+                </div>
+            </div>
+            <div class="btn__delete">
+                <button class="btn__delete_item">Очистить корзину</button>
+            </div>
+        </div>
+        <div class="parametr">
+            <label>
+                <input type='checkbox'>
+                <span class="check__indent">
+                </span>
+            </label>  
+            <p class="check__name">все</p>
+            <button class="parametr__save">Сохранить</button>
+            <button class="parametr__send">Отправить</button>
+            <button class="parametr__delete">Удалить</button>
+        </div>
+        <div class="cardFlatContainer">
+            <div class="cardFlat">
+                <div class="cardFlat__left">
+                    <div class="cardFlat__header">
+                        <p class="cardFlat__header_price">7 733 300 руб.</p>
+                        <a class="cardFlat__header_building" href="">Квартира</a>
+                    </div>
+                    <p class="cardFlat__house">Чистое Небо, <span class="cardFlat__house_building">корпус 10, III кв. 2022 г.</span></p>
+                    <div class="cardFlat__plan_description">
+                        <div class="cardFlat__house_check">
+                            <label>
+                                <input type='checkbox'>
+                                <span></span>
+                            </label>
+                        </div>
+                        <div class="cardFlat__description_room">
+                            <p class="description__room_about">кв. 62</p>
+                            <p class="description__room_about">1 комн. кв.</p>
+                        </div>
+                        <div class="cardFlat__description_floor">
+                            <p class="description__room_about">234.38 м²</p>
+                            <p class="description__room_about">7 этаж</p>
+                        </div>
+                    </div>
+                    <p class="cardFlat__house__adress cardFlat__geo">
+                        Лен. область, Всеволожский район, д. Кудрово, ул. Столичная, д. 5, к. 1
+                    </p>
+                </div>
+                <div class="cardFlat__right">
+                    <p class="cardFlat__right_bonus right__bonus_indent">Уступка от юр. лица</p>
+                    <img src="IMG/flat.jpg" alt="">
+                    <p class="cardFlat__right_data">Добавлено 21/11/2020</p>
+                </div>
+            </div>
+            <div class="cardFlat">
+                <div class="cardFlat__left">
+                    <div class="cardFlat__header">
+                        <p class="cardFlat__header_price">7 733 300 руб.</p>
+                        <a class="cardFlat__header_building" href="">Квартира</a>
+                    </div>
+                    <p class="cardFlat__house">Зеленый квартал на Пулковских высотах, <span class="cardFlat__house_building">корпус 10, III кв. 2022 г.</span></p>
+                    <div class="cardFlat__plan_description descr__indent">
+                        <div class="cardFlat__house_check">
+                            <label>
+                                <input type='checkbox'>
+                                <span></span>
+                            </label>
+                        </div>
+                        <div class="cardFlat__description_room">
+                            <p class="description__room_about">кв. 62</p>
+                            <p class="description__room_about">1 комн. кв.</p>
+                        </div>
+                        <div class="cardFlat__description_floor">
+                            <p class="description__room_about">234.38 м²</p>
+                            <p class="description__room_about">7 этаж</p>
+                        </div>
+                    </div>
+                    <p class="cardFlat__house cardFlat__geo geo__indent">
+                        Комендантский пр., уч. 1 Каменка
+                    </p>
+                </div>
+                <div class="cardFlat__right">
+                    <p class="cardFlat__right_bonus bonus__changeColor">Уступка от юр. лица</p>
+                    <img src="IMG/flat.jpg" alt="">
+                    <p class="cardFlat__right_data">Добавлено 21/11/2020</p>
+                </div>
+            </div>
+            <div class="cardFlat">
+                <div class="cardFlat__left">
+                    <div class="cardFlat__header">
+                        <p class="cardFlat__header_price">800 300 руб.</p>
+                        <div class="building__info">
+                            <a class="cardFlat__header_building building__change" href="">Паркинг</a>
+                            <div class="information">Подземная встроенно-пристроенная</div>
+                        </div>
+                    </div>
+                    <p class="cardFlat__house">Зеленый квартал на Пулковских высотах, <span class="cardFlat__house_building">корпус 10, III кв. 2022 г.</span></p>
+                    <div class="cardFlat__plan_description descr__indent_room">
+                        <div class="cardFlat__house_check">
+                            <label>
+                                <input type='checkbox'>
+                                <span></span>
+                            </label>
+                        </div>
+                        <div class="cardFlat__description_room">
+                            <p class="description__room_about">№ 7-10-2 (ПИБ №68)</p>
+                        </div>
+                        <div class="cardFlat__description_floor">
+                            <p class="description__room_about">15 м²</p>
+                        </div>
+                    </div>
+                    <p class="cardFlat__house cardFlat__geo">
+                        Лен. область, Всеволожский район, д. Кудрово, ул. Столичная, д. 5, к. 1
+                    </p>
+                </div>
+                <div class="cardFlat__right">
+                    <p class="cardFlat__right_bonus booking__color">Забронировано</p>
+                    <img src="IMG/flat.jpg" alt="">
+                    <p class="cardFlat__right_data">Добавлено 21/11/2020</p>
+                </div>
+            </div>
+            <div class="cardFlat">
+                <div class="cardFlat__left">
+                    <div class="cardFlat__header">
+                        <p class="cardFlat__header_price">800 300 руб.</p>
+                        <div class="building__info">
+                            <a class="cardFlat__header_building building__change" href="">Паркинг</a>
+                            <div class="information">Подземная встроенно-пристроенная</div>
+                        </div>
+                    </div>
+                    <p class="cardFlat__house">Зеленый квартал на Пулковских высотах, <span class="cardFlat__house_building">корпус 10, III кв. 2022 г.</span></p>
+                    <div class="cardFlat__plan_description descr__indent_change">
+                        <div class="cardFlat__house_check">
+                            <label>
+                                <input type='checkbox'>
+                                <span></span>
+                            </label>
+                        </div>
+                        <div class="cardFlat__description_room">
+                            <p class="description__room_about">№ 7-10-2 (ПИБ №68)</p>
+                        </div>
+                        <div class="cardFlat__description_floor">
+                            <p class="description__room_about">15 м²</p>
+                        </div>
+                    </div>
+                    <p class="cardFlat__house__adress cardFlat__geo">
+                        Лен. область, Всеволожский район, д. Кудрово, ул. Столичная, д. 5, к. 1
+                    </p>
+                </div>
+                <div class="cardFlat__right">
+                    <p class="cardFlat__right_bonus sales__color">Продано</p>
+                    <img src="IMG/flat.jpg" alt="">
+                    <p class="cardFlat__right_data">Добавлено 21/11/2020</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

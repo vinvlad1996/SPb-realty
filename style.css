@@ -1,0 +1,529 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'PT Sans';
+    background-color: #F7F6F4;
+}
+
+.container {
+    margin-top: 89px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1001px;
+}
+
+
+.form__flex_one {
+    min-width: 637px;
+    height: 38px;
+    border: 1px solid #C4C4C4;
+    background: url(IMG/glass.svg) #F7F6F4;
+    background-repeat: no-repeat;
+    background-position: 12px 10px;
+    padding-left: 44px;
+    margin-right: 10px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #9B9B9B;
+}
+
+.form__flex_select {
+    min-width: 177px;
+    height: 38px;
+    padding-left: 10px;
+    /* margin-right: 12px; */
+    border: 1px solid #C4C4C4;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+}
+
+.field {
+    float: right;
+    position: relative;
+    right: 164px;
+    height: 38px;
+    cursor: pointer;
+}
+
+.field .wrap {
+    position: relative;
+}
+
+.room-block .value {
+    width: 190px;
+}
+
+.field .value {
+    overflow: hidden;
+    padding: 6px 26px 6px 13px;
+    text-overflow: ellipsis;
+    font: 400 14px/18px 'PT Sans', Arial, "Helvetica Neue", Helvetica, sans-serif;
+    border: 1px solid #C4C4C4;
+    background-color: #F7F6F4;
+    -webkit-box-shadow: inset 0 2px 0 #f3f3f3;
+    -moz-box-shadow: inset 0 2px 0 #f3f3f3;
+    box-shadow: inset 0 2px 0 #f3f3f3;
+}
+
+.field .value:empty:before {
+    content: attr(data-title);
+    color: #000000;
+    font: 400 15px/24px 'PT Sans', Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.field.active .arrw {
+    cursor: pointer;
+}
+
+.field .arrw {
+    width: 25px;
+    height: 39px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    cursor: default;
+    border: none;
+    background: url(IMG/trarrow.svg) no-repeat center;
+}
+
+.field.active .dropdown {
+    display: none;
+    margin-top: 5px;
+    position: absolute;
+}
+
+.field:hover .dropdown  {
+    display: block;
+}
+
+.field:hover .arrw {
+    transform: rotate(180deg);
+}
+
+
+.field .dropdown {
+    display: none;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: absolute;
+    top: calc(100% - 1px);
+    left: 0;
+    z-index: 250;
+    background-color: #FFFFFF;
+    box-shadow: 0px 20px 25px -5px rgba(26, 32, 44, 0.1), 0px 10px 10px -5px rgba(26, 32, 44, 0.04);
+}
+
+.room-block .dropdown .inner {
+    padding: 18px 15px 5px;
+}
+
+.dropdown .inner {
+    height: 100%;
+    overflow: auto;
+}
+
+.checkbox-standart {
+    display: block;
+    margin: 0 0 13px;
+    cursor: pointer;
+}
+
+input {
+    padding: 8px 26px 7px 13px;
+    letter-spacing: -.5px;
+    font: 400 15px/24px 'PT Sans', Arial, "Helvetica Neue", Helvetica, sans-serif;
+    border-right: none;
+}
+
+.checkbox-standart input {
+    display: none;
+}
+
+.checkbox-standart .check {
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box;
+    margin: 0 15px 0 0;
+    position: relative;
+    border: 1px solid #b3b3b3;
+    background-color: #fff;
+    -webkit-box-shadow: inset 0 2px 0 #f3f3f3;
+    -moz-box-shadow: inset 0 2px 0 #f3f3f3;
+    box-shadow: inset 0 2px 0 #f3f3f3;
+}
+
+.checkbox-standart span {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.checkbox-standart .val {
+    position: relative;
+    top: -5px;
+    color: #02101c;
+    font: 400 15px/18px 'PT Sans';
+    border: none;
+}
+
+.checkbox-standart .val:hover {
+    color: #FF0D29;
+    transition: 0.2s;
+}
+
+.mini-hack {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+
+.checkbox-standart span {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.btn__delete_item {
+    position: relative;
+    float: right;
+    top: -38px;
+    right: 3px;
+    height: 38px;
+    padding: 9px 40px 9px 13px;
+    background: #E5E5E5;
+    border: none;
+    font-family: 'PT Sans';
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    color: #000000;
+    background-image: url(IMG/delete.svg);
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    background-position: 122px 14px;
+    cursor: pointer;
+}
+
+.form__flex_delete {
+    height: 38px;
+    background: #E5E5E5;
+    border: none;
+    font-size: 13px;
+    line-height: 20px;
+    color: #000000;
+    background-image: url(IMG/delete.svg);
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    background-position: 128px 14px;
+}
+
+.parametr {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.parametr__all {
+    margin-right: 13px;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.check__indent {
+    margin-left: 25px;
+}
+
+.check__name {
+    margin-left: 10px;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.parametr__text {
+    padding: 0 5px;
+}
+
+.parametr__save,
+.parametr__send,
+.parametr__delete {
+    margin-right: 10px;
+    background: #E5E5E5;
+    color: #000000;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 9px 43px 9px 13px;
+    border: none;
+    cursor: pointer;
+}
+
+.parametr__save {
+    margin-left: 13px;
+    background-image: url(IMG/pdf.svg);
+    background-repeat: no-repeat;
+    background-position: 89px 12px;
+}
+
+.parametr__send {
+    background-image: url(IMG/message.svg);
+    background-repeat: no-repeat;
+    background-position: 88px 12px;
+}
+
+.parametr__delete {
+    background-image: url(IMG/delete.svg);
+    background-repeat: no-repeat;
+    background-position: 75px 12px;
+}
+
+.cardFlatContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 489px);
+    grid-template-rows: repeat (2, 238px);
+    gap: 23px;
+    margin-top: 20px;
+    margin-bottom: 84px;
+}
+
+.cardFlat {
+    display: flex;
+    border: 1px solid #E5E5E5;
+    background: #FFFFFF;
+}
+
+.cardFlat__left {
+    margin-right: 42px;
+    margin-top: 22px;
+}
+
+.cardFlat__header {
+    display: flex;
+    align-items: center;
+    margin-left: 66px;
+}
+
+.cardFlat__plan_description {
+    display: flex;
+    margin-top: 35px;
+    margin-bottom: 24px;
+}
+
+#check {
+    width: 16px;
+    height: 16px;
+    background: #FCE66F;
+}
+
+label input {
+    display: none;
+}
+
+label span {
+    height: 16px;
+    width: 16px;
+    border: 1px solid #C4C4C4;
+    display: inline-block;
+    position: relative;
+    background-color:#FFFFFF;
+    padding: 4px 3px 5px;
+}
+
+.building__change:hover:after {
+    content: "";
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent transparent #0a0a0a  transparent;
+    box-shadow: 0px 8px 30px -3px rgba(26, 32, 44, 0.1), 0px 4px 6px -2px rgba(26, 32, 44, 0.05);
+    opacity: 0.6;
+    position: relative;
+    bottom: -3px;
+    right: 40px;
+}
+
+.information {
+    display: none;
+    position: fixed;
+    background: #0a0a0a;
+    box-shadow: 0px 8px 30px -3px rgba(26, 32, 44, 0.1), 0px 4px 6px -2px rgba(26, 32, 44, 0.05);
+    opacity: 0.6;
+    padding: 12px 18px;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 155%;
+    color: #FFFFFF;
+}
+
+[type=checkbox]:checked + span:before {
+    content: url(IMG/check.svg);
+    position: absolute;
+    background:#FCE66F;
+    top: 0;
+    left: 0;
+    font-size:11px;
+    height: 14px;
+    width: 13px;
+    padding-left: 1px;
+}
+
+.cardFlat__house {
+    max-width: 229px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    margin-left: 66px;
+    margin-top: 6px;
+}
+
+a.cardFlat__header_building:hover+div {
+    display: block;
+    margin-top: 12px;
+    margin-left: 32px;
+}
+
+.cardFlat__house__adress {
+    max-width: 242px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+  
+}
+
+.cardFlat__header_price {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+    color: #FF0D29;
+    margin-right: 16px;
+}
+
+.right__bonus_indent {
+    margin-left: 2px;
+}
+
+.descr__indent {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.descr__indent_room {
+    margin-top: 17px;
+    margin-bottom: 17px;
+}
+
+.descr__indent_change {
+    margin-top: 18px;
+    margin-bottom: 38px;
+}
+
+.cardFlat__header_building {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #232735;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 2px rgba(94, 119, 157, 0.25);
+    border-radius: 32px;
+    background-image: url(IMG/miniflat.svg);
+    background-repeat: no-repeat;
+    background-position: 17px 6px;
+    padding: 5px 16px 5px 38px;
+}
+
+.cardFlat__house_building {
+    color: #9B9B9B;
+}
+
+.cardFlat__geo {
+    margin-left: 48.93px;
+    background-image: url(IMG/geo.svg);
+    background-repeat: no-repeat;
+    background-position: -2px 5px;
+    padding-left: 17.07px;
+}
+
+.cardFlat__house_check {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 3px;
+}
+
+.cardFlat__description_room {
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right: 1px solid #C4C4C4;
+}
+
+.cardFlat__right_bonus {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #DD4C5D;
+    background: #FFE4E4;
+    margin-top: 21px;
+    margin-bottom: 27px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 23px;
+    padding-right: 7.4px;
+    background-image: url(IMG/reddot.svg);
+    background-repeat: no-repeat;
+    background-position: 10px 13px;
+}
+
+.cardFlat__right_data {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    color: #9B9B9B;
+    margin-top: 11px;
+    margin-bottom: 25px;
+}
+
+.bonus__changeColor {
+    background: #D6F5FF;
+    color: #0291C1;
+    background-image: url(IMG/blueDot.svg);
+    background-repeat: no-repeat;
+    background-position: 10px 13px;
+}
+
+.geo__indent {
+    margin-top: 20px;
+}
+
+.building__change {
+    background-image: url(IMG/car.svg);
+    background-repeat: no-repeat;
+    background-position: 17px 6px;
+    padding: 5px 16px 5px 38px;
+}
+
+.booking__color {
+    background: #EDEDED;
+    color: #686868;
+    background-image: url(IMG/blackDot.svg);
+    background-repeat: no-repeat;
+    background-position: 10px 13px;
+    margin-left: 24px;
+}
+
+.sales__color {
+    background: #CCCCCC;
+    color: #808080;
+    background-image: url(IMG/greyDot.svg);
+    background-repeat: no-repeat;
+    background-position: 10px 13px;
+    margin-left: 66px;
+}
